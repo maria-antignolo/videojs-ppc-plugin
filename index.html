@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>videojs-ppc-plugin Demo</title>
+  <link href="/node_modules/video.js/dist/video-js.css" rel="stylesheet">
+  <link href="/dist/videojs-ppc-plugin.css" rel="stylesheet">
+</head>
+<body>
+  <video id="videojs-ppc-plugin-player" class="video-js vjs-default-skin" controls>
+    <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'>
+    <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/webm'>
+  </video>
+  <div  class="box" id="videoNotifications">
+    <div id="start"></div>
+    <div id="actions"></div>
+    <div id="end"></div>
+    <div class="counter">
+      <p>
+        Number of pauses: <span id="pauseCounter"></span><br />
+        Number of times the video was resumed: <span id="playCounter"></span>
+      </p>
+    </div>
+
+  </div>
+  <!--<ul>
+    <li><a href="/test/">Run unit tests in browser.</a></li>
+    <li><a href="/docs/api/">Read generated docs.</a></li>
+  </ul>-->
+  <script src="/node_modules/video.js/dist/video.js"></script>
+  <script src="/dist/videojs-ppc-plugin.js"></script>
+  <script>
+    (function(window, videojs) {
+      var player = window.player = videojs('videojs-ppc-plugin-player');
+      player.ppcPlugin();
+    }(window, window.videojs));
+  </script>
+</body>
+</html>

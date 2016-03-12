@@ -1,0 +1,51 @@
+// Sass for videojs-ppc-plugin
+$font-stack: Verdana,sans-serif;
+$backgrounds-color: #f1f1f1;
+$default-radius: 10px;
+$default-padding: 10px;
+$success-color: #0B3B0B;
+$danger-color: #8A0868;
+$info-color: #0000FF;
+   
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+.video-js {
+	width: 60%;
+	float:left;
+
+  // This class is added to the video.js element by the plugin by default.
+  &.vjs-ppc-plugin {
+    display: block;
+  }
+}
+
+
+.box { 
+	@include border-radius($default-radius);
+	background-color: $backgrounds-color;
+	padding: $default-padding;
+	width: 35%; 
+	float:right;
+}
+
+#videoNotifications {
+	div {
+		font-family: $font-stack;
+	    font-size: 15px;
+	    line-height: 1.5;
+	}
+}
+
+#start {color: $success-color;}
+
+#end {color: $danger-color;}
+
+#actions {color: $info-color;}
+
+#counter { color: $success-color; margin-top:7px; }
