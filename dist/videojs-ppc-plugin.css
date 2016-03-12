@@ -4,43 +4,4 @@
  * @copyright 2016 María Antignolo
  * @license Apache-2.0
  */
-.video-js {
-  width: 60%;
-  float: left;
-}
-.video-js.vjs-ppc-plugin {
-  display: block;
-}
-
-.box {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
-  background-color: #f1f1f1;
-  padding: 10px;
-  width: 35%;
-  float: right;
-}
-
-#videoNotifications div {
-  font-family: Verdana, sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-#start {
-  color: #0B3B0B;
-}
-
-#end {
-  color: #8A0868;
-}
-
-#actions {
-  color: #0000FF;
-}
-
-#counter {
-  color: #0B3B0B; margin-top:7px;
-}
+.video-js{width:60%;float:left}.video-js.vjs-ppc-plugin{display:block}.box{-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;border-radius:10px;background-color:#f1f1f1;padding:10px;width:35%;float:right}#videoNotifications div{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}#start{color:#0B3B0B}#end{color:#8A0868}#actions{color:blue}#counter{color:#0B3B0B;margin-top:7px}
