@@ -1,7 +1,25 @@
-import videojs from 'video.js';
+/**
+ * videojs-ppc-plugin
+ * @version 0.0.0
+ * @copyright 2016 María Antignolo
+ * @license Apache-2.0
+ */
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.videojsPpcPlugin = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function (global){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _videoJs = (typeof window !== "undefined" ? window['videojs'] : typeof global !== "undefined" ? global['videojs'] : null);
+
+var _videoJs2 = _interopRequireDefault(_videoJs);
 
 // Default options for the plugin.
-const defaults = {};
+var defaults = {};
 
 /**
  * Function to invoke when the player is ready.
@@ -14,7 +32,7 @@ const defaults = {};
  * @param    {Player} player
  * @param    {Object} [options={}]
  */
-const onPlayerReady = (player, options) => {
+var onPlayerReady = function onPlayerReady(player, options) {
   player.addClass('vjs-ppc-plugin');
 };
 
@@ -30,8 +48,8 @@ const onPlayerReady = (player, options) => {
  * @param    {Object} [options={}]
  *           An object of options left to the plugin author to define.
  */
-const ppcPlugin = function(options) {
-   var _p = this;
+var ppcPlugin = function ppcPlugin(options) {
+ var _p = this;
  var _f = null;
  var playcount = 0;
  var pausecount = 0;
@@ -143,12 +161,17 @@ _p._v = {
 };
 
 _p.ready( function () { _p._v.init() } );
+ 
 };
 
 // Register the plugin with video.js.
-videojs.plugin('ppcPlugin', ppcPlugin);
+_videoJs2['default'].plugin('ppcPlugin', ppcPlugin);
 
 // Include the version number.
-ppcPlugin.VERSION = '__VERSION__';
+ppcPlugin.VERSION = '0.0.0';
 
-export default ppcPlugin;
+exports['default'] = ppcPlugin;
+module.exports = exports['default'];
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}]},{},[1])(1)
+});
