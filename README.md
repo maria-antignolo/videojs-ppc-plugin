@@ -7,11 +7,19 @@ Plugin to count pauses and resumes during a video and make an http call to regis
 <!-- START doctoc -->
 <!-- END doctoc -->
 ## Installation
+Using this 3 commands you should be set up to check the plugin working :-)
 
 ```sh
 npm install --save videojs-ppc-plugin
-```  
-compile the sass file to videojs-ppc-plugin.css  
+``` 
+```sh
+npm npm run-script build 
+``` 
+```sh
+npm npm run-script start 
+``` 
+ 
+
 
 ## Usage
 
